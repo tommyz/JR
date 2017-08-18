@@ -9,6 +9,9 @@
 #ifndef JRHeaderFile_h
 #define JRHeaderFile_h
 
+#import "JRConst.h"
+#import "JRHttpAddress.h"
+#import "JRTool.h"
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
 #import "UIView+ZJExtension.h"

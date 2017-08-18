@@ -10,7 +10,7 @@
 
 @implementation UIImage (ZJExtension)
 
-+ (UIImage *)resizeImageNamed:(NSString *)imgName{
++ (UIImage *)resizedImageNamed:(NSString *)imgName{
     
     UIImage *img = [UIImage imageNamed:imgName];
     img = [img stretchableImageWithLeftCapWidth:img.size.width * 0.5 topCapHeight:img.size.height * 0.5];
@@ -18,7 +18,7 @@
 }
 
 
-+ (UIImage *)setRenderingModeOriginalImageNamed:(NSString *)imgName{
++ (UIImage *)renderingModeOriginalImageNamed:(NSString *)imgName{
     
     UIImage *img = [UIImage imageNamed:imgName];
     img = [img imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -26,7 +26,7 @@
 }
 
 
-+ (UIImage *)setRenderingModeAlwaysTemplateImageNamed:(NSString *)imgName{
++ (UIImage *)renderingModeAlwaysTemplateImageNamed:(NSString *)imgName{
     
     UIImage *img = [UIImage imageNamed:imgName];
     img = [img imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
@@ -34,7 +34,7 @@
 }
 
 
-+ (UIImage *)createImageWithColor:(UIColor *)color{
++ (UIImage *)imageWithColor:(UIColor *)color{
     
     // 1.开启上下文
     CGRect rect=CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
@@ -53,7 +53,7 @@
 }
 
 
-+ (UIImage *)createImageWithColor:(UIColor *)color size:(CGSize)size{
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size{
     
     // 1.开启上下文
     CGRect rect=CGRectMake(0.0f, 0.0f, size.width, size.height);
@@ -96,53 +96,6 @@
 }
 
 
-+ (UIImage *)reSizeImageData:(UIImage *)sourceImage maxImageSize:(CGFloat)maxImageSize maxSizeWithKB:(CGFloat) maxSize{
-    if (maxSize <= 0.0) maxSize = 1024.0;
-    if (maxImageSize <= 0.0) maxImageSize = 1024.0;
-    
-    //先调整分辨率
-    CGSize newSize = CGSizeMake(sourceImage.size.width, sourceImage.size.height);
-    
-    CGFloat tempHeight = newSize.height / maxImageSize;
-    CGFloat tempWidth = newSize.width / maxImageSize;
-    
-    if (tempWidth > 1.0 && tempWidth > tempHeight) {
-        newSize = CGSizeMake(sourceImage.size.width / tempWidth, sourceImage.size.height / tempWidth);
-    }
-    else if (tempHeight > 1.0 && tempWidth < tempHeight){
-        newSize = CGSizeMake(sourceImage.size.width / tempHeight, sourceImage.size.height / tempHeight);
-    }
-    
-    UIGraphicsBeginImageContext(newSize);
-    [sourceImage drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    //调整大小
-    NSData *imageData = UIImageJPEGRepresentation(newImage,1.0);
-    CGFloat sizeOriginKB = imageData.length / 1024.0;
-    
-    CGFloat resizeRate = 0.9;
-    while (sizeOriginKB > maxSize && resizeRate > 0.1) {
-        imageData = UIImageJPEGRepresentation(newImage,resizeRate);
-        sizeOriginKB = imageData.length / 1024.0;
-        resizeRate -= 0.1;
-    }
-    
-    return [UIImage imageWithData:imageData];
-}
-
-
-+ (UIImage *)reSizeImage:(UIImage *)image toSize:(CGSize)reSize{
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(reSize.width, reSize.height), NO, 0.0);
-    [image drawInRect:CGRectMake(0, 0, reSize.width, reSize.height)];
-    UIImage *reSizeImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return reSizeImage;
-    
-}
-
 
 - (UIImage *)imageWithCornerRadius:(CGFloat)radius{
     
@@ -166,6 +119,54 @@
     UIGraphicsEndImageContext();
     
     return image;
+}
+
+
+- (UIImage *)resizeImageWithSize:(CGSize)size kilobyte:(CGFloat)kilobyte{
+    
+    if (size.width <= 0.0 || size.height <= 0) size = CGSizeMake(2000, 2000);
+    if (kilobyte <= 0.0) kilobyte = 1024;
+    
+    //先调整分辨率
+    CGSize newSize = CGSizeMake(self.size.width, self.size.height);
+    
+    CGFloat tempHeight = newSize.height / size.height;
+    CGFloat tempWidth = newSize.width / size.width;
+    
+    if (tempWidth > 1.0 && tempWidth > tempHeight) {
+        newSize = CGSizeMake(self.size.width / tempWidth, self.size.height / tempWidth);
+    }
+    else if (tempHeight > 1.0 && tempWidth < tempHeight){
+        newSize = CGSizeMake(self.size.width / tempHeight, self.size.height / tempHeight);
+    }
+    
+    UIGraphicsBeginImageContext(newSize);
+    [self drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    //调整大小
+    NSData *imageData = UIImageJPEGRepresentation(newImage,1.0);
+    CGFloat sizeOriginKB = imageData.length / 1024.0;
+    
+    CGFloat resizeRate = 0.9;
+    while (sizeOriginKB > kilobyte && resizeRate > 0.1) {
+        imageData = UIImageJPEGRepresentation(newImage,resizeRate);
+        sizeOriginKB = imageData.length / 1024.0;
+        resizeRate -= 0.1;
+    }
+    
+    return [UIImage imageWithData:imageData];
+}
+
+
+- (UIImage *)resizeTo:(CGSize)size{
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(size.width, size.height), NO, 0.0);
+    [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *resizeImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return resizeImage;
 }
 
 @end

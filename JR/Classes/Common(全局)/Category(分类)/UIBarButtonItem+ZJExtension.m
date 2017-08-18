@@ -14,9 +14,8 @@
     UIButton *textBtn = [[UIButton alloc] init];
     
     [textBtn setTitle:title forState:UIControlStateNormal];
-    textBtn.titleLabel.font = [UIFont systemFontOfSize:BACommonTextFontSize];
-    [textBtn setTitleColor:BAWhiteColor forState:UIControlStateNormal];
-    [textBtn setTitleColor:BAWhiteColor forState:UIControlStateDisabled];
+    textBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+    [textBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     CGSize btnSize = [title sizeWithAttributes:@{NSFontAttributeName : textBtn.titleLabel.font}];
     textBtn.bounds = CGRectMake(0, 0, btnSize.width, btnSize.height);

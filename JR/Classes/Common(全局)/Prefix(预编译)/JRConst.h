@@ -34,12 +34,12 @@
 /**
  字体
  */
-#define BAThinFont(size) [UIFont systemFontOfSize:size weight:UIFontWeightUltraLight]
-#define BACommonFont(size) [UIFont systemFontOfSize:size weight:UIFontWeightRegular]
-#define BABlodFont(size) [UIFont systemFontOfSize:size weight:UIFontWeightBold]
+#define JRThinFont(size) [UIFont systemFontOfSize:size weight:UIFontWeightUltraLight]
+#define JRCommonFont(size) [UIFont systemFontOfSize:size weight:UIFontWeightRegular]
+#define JRBlodFont(size) [UIFont systemFontOfSize:size weight:UIFontWeightBold]
 
-#define BACommonTextFontSize 16
-#define BALargeTextFontSize 20
-#define BASmallTextFontSize 14
+#define JRCommonTextFontSize 16
+#define JRLargeTextFontSize 20
+#define JRSmallTextFontSize 14
 
 #endif /* JRConst_h */
