@@ -81,11 +81,11 @@
 		389282BA1F471AC900CAADD0 /* ZJAFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 389282B91F471AC900CAADD0 /* ZJAFNetworking.m */; };
 		389282BD1F47208900CAADD0 /* JRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 389282BC1F47208900CAADD0 /* JRNavigationController.m */; };
 		389282C01F4722DC00CAADD0 /* NSObject+ZJUIExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 389282BF1F4722DC00CAADD0 /* NSObject+ZJUIExtension.m */; };
+		389282C41F47281D00CAADD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 389282C31F47281D00CAADD0 /* Images.xcassets */; };
 		38AC38521F2C7B8700D47E35 /* JRTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC38511F2C7B8700D47E35 /* JRTests.m */; };
 		38AC385D1F2C7B8700D47E35 /* JRUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC385C1F2C7B8700D47E35 /* JRUITests.m */; };
 		38AC38851F2C82B900D47E35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC386F1F2C82B900D47E35 /* AppDelegate.m */; };
 		38AC38871F2C82B900D47E35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC38711F2C82B900D47E35 /* main.m */; };
-		38AC38881F2C82B900D47E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38AC38841F2C82B900D47E35 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,6 +263,7 @@
 		389282BC1F47208900CAADD0 /* JRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRNavigationController.m; sourceTree = "<group>"; };
 		389282BE1F4722DC00CAADD0 /* NSObject+ZJUIExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZJUIExtension.h"; sourceTree = "<group>"; };
 		389282BF1F4722DC00CAADD0 /* NSObject+ZJUIExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZJUIExtension.m"; sourceTree = "<group>"; };
+		389282C31F47281D00CAADD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		38AC38341F2C7B8700D47E35 /* JR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AC384D1F2C7B8700D47E35 /* JRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AC38511F2C7B8700D47E35 /* JRTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRTests.m; sourceTree = "<group>"; };
@@ -274,7 +275,6 @@
 		38AC386F1F2C82B900D47E35 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		38AC38701F2C82B900D47E35 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38AC38711F2C82B900D47E35 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		38AC38841F2C82B900D47E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -872,7 +872,7 @@
 		38AC38831F2C82B900D47E35 /* Image(图片) */ = {
 			isa = PBXGroup;
 			children = (
-				38AC38841F2C82B900D47E35 /* Assets.xcassets */,
+				389282C31F47281D00CAADD0 /* Images.xcassets */,
 			);
 			path = "Image(图片)";
 			sourceTree = "<group>";
@@ -987,7 +987,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				389282781F47193800CAADD0 /* Info.plist in Resources */,
-				38AC38881F2C82B900D47E35 /* Assets.xcassets in Resources */,
+				389282C41F47281D00CAADD0 /* Images.xcassets in Resources */,
 				389282911F47193800CAADD0 /* MJRefresh.bundle in Resources */,
 				3892826C1F47193800CAADD0 /* Info.plist in Resources */,
 			);
@@ -1217,6 +1217,7 @@
 				DEVELOPMENT_TEAM = ADESGAWMRV;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JR/Classes/Common(全局)/Prefix(预编译)/JRHeaderFile.h";
 				INFOPLIST_FILE = "JR/Classes/Common(全局)/Entrance(入口)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zj.JR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1230,6 +1231,7 @@
 				DEVELOPMENT_TEAM = ADESGAWMRV;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JR/Classes/Common(全局)/Prefix(预编译)/JRHeaderFile.h";
 				INFOPLIST_FILE = "JR/Classes/Common(全局)/Entrance(入口)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zj.JR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
