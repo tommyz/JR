@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		387C5AD91F47DD4200CF0E97 /* JRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C5AD81F47DD4200CF0E97 /* JRHomeViewController.m */; };
+		387C5ADF1F47DE1600CF0E97 /* JRZoomCycleImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C5ADC1F47DE1600CF0E97 /* JRZoomCycleImgCell.m */; };
+		387C5AE01F47DE1600CF0E97 /* JRZoomCycleImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C5ADE1F47DE1600CF0E97 /* JRZoomCycleImgView.m */; };
+		387C5AE41F47DFF000CF0E97 /* JRGymInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C5AE31F47DFF000CF0E97 /* JRGymInfoView.m */; };
+		387C5AE91F47E15300CF0E97 /* JRGymClassTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C5AE81F47E15300CF0E97 /* JRGymClassTableView.m */; };
+		387C5AEC1F47E16300CF0E97 /* JRFitnessStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C5AEB1F47E16300CF0E97 /* JRFitnessStatusView.m */; };
 		389282661F47193800CAADD0 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 389281D41F47193800CAADD0 /* AFHTTPSessionManager.m */; };
 		389282671F47193800CAADD0 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 389281D71F47193800CAADD0 /* AFNetworkReachabilityManager.m */; };
 		389282681F47193800CAADD0 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 389281D91F47193800CAADD0 /* AFSecurityPolicy.m */; };
@@ -106,6 +112,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		387C5AD71F47DD4200CF0E97 /* JRHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRHomeViewController.h; sourceTree = "<group>"; };
+		387C5AD81F47DD4200CF0E97 /* JRHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRHomeViewController.m; sourceTree = "<group>"; };
+		387C5ADB1F47DE1600CF0E97 /* JRZoomCycleImgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRZoomCycleImgCell.h; sourceTree = "<group>"; };
+		387C5ADC1F47DE1600CF0E97 /* JRZoomCycleImgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRZoomCycleImgCell.m; sourceTree = "<group>"; };
+		387C5ADD1F47DE1600CF0E97 /* JRZoomCycleImgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRZoomCycleImgView.h; sourceTree = "<group>"; };
+		387C5ADE1F47DE1600CF0E97 /* JRZoomCycleImgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRZoomCycleImgView.m; sourceTree = "<group>"; };
+		387C5AE21F47DFF000CF0E97 /* JRGymInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRGymInfoView.h; sourceTree = "<group>"; };
+		387C5AE31F47DFF000CF0E97 /* JRGymInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRGymInfoView.m; sourceTree = "<group>"; };
+		387C5AE71F47E15300CF0E97 /* JRGymClassTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRGymClassTableView.h; sourceTree = "<group>"; };
+		387C5AE81F47E15300CF0E97 /* JRGymClassTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRGymClassTableView.m; sourceTree = "<group>"; };
+		387C5AEA1F47E16300CF0E97 /* JRFitnessStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRFitnessStatusView.h; sourceTree = "<group>"; };
+		387C5AEB1F47E16300CF0E97 /* JRFitnessStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRFitnessStatusView.m; sourceTree = "<group>"; };
 		389281CE1F47167300CAADD0 /* JRConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRConst.h; sourceTree = "<group>"; };
 		389281CF1F4716BC00CAADD0 /* JRHttpAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRHttpAddress.h; sourceTree = "<group>"; };
 		389281D01F4716D600CAADD0 /* JRHeaderFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRHeaderFile.h; sourceTree = "<group>"; };
@@ -302,6 +320,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		387C5ADA1F47DE1600CF0E97 /* ZoomCycleImgView(轮播图) */ = {
+			isa = PBXGroup;
+			children = (
+				387C5ADB1F47DE1600CF0E97 /* JRZoomCycleImgCell.h */,
+				387C5ADC1F47DE1600CF0E97 /* JRZoomCycleImgCell.m */,
+				387C5ADD1F47DE1600CF0E97 /* JRZoomCycleImgView.h */,
+				387C5ADE1F47DE1600CF0E97 /* JRZoomCycleImgView.m */,
+			);
+			name = "ZoomCycleImgView(轮播图)";
+			path = ZoomCycleImgView;
+			sourceTree = "<group>";
+		};
+		387C5AE11F47DFE100CF0E97 /* GymInfoView(健身房信息) */ = {
+			isa = PBXGroup;
+			children = (
+				387C5AE21F47DFF000CF0E97 /* JRGymInfoView.h */,
+				387C5AE31F47DFF000CF0E97 /* JRGymInfoView.m */,
+			);
+			name = "GymInfoView(健身房信息)";
+			path = GymInfoView;
+			sourceTree = "<group>";
+		};
+		387C5AE51F47E0D800CF0E97 /* FitnessStatusView(健身数据) */ = {
+			isa = PBXGroup;
+			children = (
+				387C5AEA1F47E16300CF0E97 /* JRFitnessStatusView.h */,
+				387C5AEB1F47E16300CF0E97 /* JRFitnessStatusView.m */,
+			);
+			name = "FitnessStatusView(健身数据)";
+			path = FitnessStatusView;
+			sourceTree = "<group>";
+		};
+		387C5AE61F47E0D800CF0E97 /* GymClassTableView(健身课) */ = {
+			isa = PBXGroup;
+			children = (
+				387C5AE71F47E15300CF0E97 /* JRGymClassTableView.h */,
+				387C5AE81F47E15300CF0E97 /* JRGymClassTableView.m */,
+			);
+			name = "GymClassTableView(健身课)";
+			path = GymClassTableView;
+			sourceTree = "<group>";
+		};
 		389281C21F47162000CAADD0 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +375,8 @@
 		389281C31F47162000CAADD0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				387C5AD71F47DD4200CF0E97 /* JRHomeViewController.h */,
+				387C5AD81F47DD4200CF0E97 /* JRHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -329,6 +391,10 @@
 		389281C51F47162000CAADD0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				387C5AE51F47E0D800CF0E97 /* FitnessStatusView(健身数据) */,
+				387C5AE61F47E0D800CF0E97 /* GymClassTableView(健身课) */,
+				387C5AE11F47DFE100CF0E97 /* GymInfoView(健身房信息) */,
+				387C5ADA1F47DE1600CF0E97 /* ZoomCycleImgView(轮播图) */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1029,6 +1095,7 @@
 				389282891F47193800CAADD0 /* MJRefreshAutoNormalFooter.m in Sources */,
 				38AC38871F2C82B900D47E35 /* main.m in Sources */,
 				389282961F47193800CAADD0 /* UIView+MJExtension.m in Sources */,
+				387C5AD91F47DD4200CF0E97 /* JRHomeViewController.m in Sources */,
 				389282751F47193800CAADD0 /* View+MASAdditions.m in Sources */,
 				3892829C1F47193800CAADD0 /* SDWebImageDownloader.m in Sources */,
 				3892829D1F47193800CAADD0 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1041,6 +1108,7 @@
 				3892828B1F47193800CAADD0 /* MJRefreshBackGifFooter.m in Sources */,
 				3892827C1F47193800CAADD0 /* MJPropertyKey.m in Sources */,
 				389282771F47193800CAADD0 /* MBProgressHUD.m in Sources */,
+				387C5AE41F47DFF000CF0E97 /* JRGymInfoView.m in Sources */,
 				3892829A1F47193800CAADD0 /* SDWebImageCompat.m in Sources */,
 				389282871F47193800CAADD0 /* MJRefreshHeader.m in Sources */,
 				389282BA1F471AC900CAADD0 /* ZJAFNetworking.m in Sources */,
@@ -1056,6 +1124,7 @@
 				389282801F47193800CAADD0 /* NSObject+MJKeyValue.m in Sources */,
 				389282691F47193800CAADD0 /* AFURLRequestSerialization.m in Sources */,
 				389282B21F4719E600CAADD0 /* Foundation+Log.m in Sources */,
+				387C5AEC1F47E16300CF0E97 /* JRFitnessStatusView.m in Sources */,
 				389282BD1F47208900CAADD0 /* JRNavigationController.m in Sources */,
 				389282671F47193800CAADD0 /* AFNetworkReachabilityManager.m in Sources */,
 				389282821F47193800CAADD0 /* NSString+MJExtension.m in Sources */,
@@ -1065,11 +1134,14 @@
 				389282931F47193800CAADD0 /* NSBundle+MJRefresh.m in Sources */,
 				3892828C1F47193800CAADD0 /* MJRefreshBackNormalFooter.m in Sources */,
 				389282941F47193800CAADD0 /* UIScrollView+MJExtension.m in Sources */,
+				387C5AE01F47DE1600CF0E97 /* JRZoomCycleImgView.m in Sources */,
 				3892826A1F47193800CAADD0 /* AFURLResponseSerialization.m in Sources */,
 				389282881F47193800CAADD0 /* MJRefreshAutoGifFooter.m in Sources */,
+				387C5AE91F47E15300CF0E97 /* JRGymClassTableView.m in Sources */,
 				3892826F1F47193800CAADD0 /* MASConstraintMaker.m in Sources */,
 				3892827A1F47193800CAADD0 /* MJFoundation.m in Sources */,
 				389282861F47193800CAADD0 /* MJRefreshFooter.m in Sources */,
+				387C5ADF1F47DE1600CF0E97 /* JRZoomCycleImgCell.m in Sources */,
 				389282761F47193800CAADD0 /* ViewController+MASAdditions.m in Sources */,
 				389282791F47193800CAADD0 /* MJExtensionConst.m in Sources */,
 				3892827F1F47193800CAADD0 /* NSObject+MJCoding.m in Sources */,

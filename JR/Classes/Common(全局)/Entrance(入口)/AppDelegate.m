@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "JRHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //初始化
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor blackColor];
+    [self.window makeKeyAndVisible];
+    
+    JRHomeViewController *homeVC = [[JRHomeViewController alloc] init];
+    self.window.rootViewController = homeVC;
+    
     return YES;
 }
 

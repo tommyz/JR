@@ -9,11 +9,14 @@
 #ifndef JRTool_h
 #define JRTool_h
 
-//自定义颜色
-#define BAColor(R, G, B) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1]
+//自定义颜色RGB
+#define JRColor(R, G, B) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1]
+
+//自定义颜色16进制
+#define JRHexColor(hex) [UIColor colorWithRed:(((hex & 0xFF0000) >> 16))/255.0 green:(((hex & 0xFF00) >>8))/255.0 blue:((hex & 0xFF))/255.0 alpha:1.0]
 
 //随机色
-#define BARandomColor BAColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+#define JRRandomColor JRColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 
 //弧度转角度
 #define JRRadianToAngle(radian) ((radian) * (180.0 / M_PI))
