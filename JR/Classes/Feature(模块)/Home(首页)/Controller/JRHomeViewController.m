@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = JRWhiteColor;
+    self.view.backgroundColor = JRHexColor(0xf5fafa);
     
     [self setupScrollView];
     
@@ -43,9 +43,17 @@
 }
 
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+
 #pragma mark - private
 - (void)setupScrollView{
     _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    _scrollView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
     _scrollView.showsVerticalScrollIndicator = NO;
     _scrollView.contentSize = CGSizeMake(JRScreenWidth, JRGymInfoViewHeight + JRZoomCycleImgViewHeight + JRHomeTitleHeight * 2 + JRFitnessStatusViewHeight + JRGymClassCellHeight * 3 + 14 * JRPadding);
     
@@ -55,7 +63,6 @@
 
 - (void)setupGymInfoView{
     _gymInfoView = [[JRGymInfoView alloc] initWithFrame:CGRectMake(0, 0, JRScreenWidth, JRGymInfoViewHeight)];
-    _gymInfoView.backgroundColor = JRRandomColor;
     
     [_scrollView addSubview:_gymInfoView];
 }
@@ -63,9 +70,14 @@
 
 - (void)setupZoomCycleImgView{
     _zoomCycleImgView = [[JRZoomCycleImgView alloc] initWithFrame:CGRectMake(0, _gymInfoView.bottom + 3 * JRPadding, JRScreenWidth, JRZoomCycleImgViewHeight)];
-    _zoomCycleImgView.backgroundColor = JRRandomColor;
+    _zoomCycleImgView.picArray = @[[UIImage imageNamed:@"banner1"], [UIImage imageNamed:@"banner2"], [UIImage imageNamed:@"banner3"]];
     
     [_scrollView addSubview:_zoomCycleImgView];
+    
+    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(JRPadding, _zoomCycleImgView.bottom + 2 * JRPadding, JRScreenWidth - 2 * JRPadding, 1)];
+    line.backgroundColor = [JRBlackColor colorWithAlphaComponent:0.05];
+
+    [_scrollView addSubview:line];
 }
 
 
@@ -75,7 +87,6 @@
     [_scrollView addSubview:_statusTitle];
     
     _fitnessStatusView = [[JRFitnessStatusView alloc] initWithFrame:CGRectMake(0, _statusTitle.bottom + JRPadding, JRScreenWidth, JRFitnessStatusViewHeight)];
-    _fitnessStatusView.backgroundColor = JRRandomColor;
     
     [_scrollView addSubview:_fitnessStatusView];
 }
@@ -86,8 +97,7 @@
     
     [_scrollView addSubview:_classTitle];
     
-    _gymClassTableView = [[JRGymClassTableView alloc] initWithFrame:CGRectMake(0, _classTitle.bottom + JRPadding, JRScreenWidth, JRGymClassCellHeight * 3 + JRPadding * 2)];
-    _gymClassTableView.backgroundColor = JRRandomColor;
+    _gymClassTableView = [[JRGymClassTableView alloc] initWithFrame:CGRectMake(0, _classTitle.bottom + JRPadding, JRScreenWidth, JRGymClassCellHeight * 3 + JRPadding * 3) style:UITableViewStylePlain];
     
     [_scrollView addSubview:_gymClassTableView];
 }

@@ -18,15 +18,43 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [self loadRootViewController];
+    
+    return YES;
+}
+
+
+- (void)loadRootViewController{
+    
     //初始化
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
     
-    JRHomeViewController *homeVC = [[JRHomeViewController alloc] init];
-    self.window.rootViewController = homeVC;
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    tabBarVC.tabBar.tintColor = JRCommonTextColor;
     
-    return YES;
+    JRHomeViewController *homeVC = [[JRHomeViewController alloc] init];
+    JRNavigationController *homeNaviVC = [[JRNavigationController alloc] initWithRootViewController:homeVC];
+    homeNaviVC.tabBarItem.title = @"首页";
+    homeNaviVC.tabBarItem.image = [UIImage renderingModeOriginalImageNamed:@"home"];
+    homeNaviVC.tabBarItem.selectedImage = [UIImage renderingModeOriginalImageNamed:@"homeSel"];
+    
+    UIViewController *relationVC = [[UIViewController alloc] init];
+    JRNavigationController *relationNaviVC = [[JRNavigationController alloc] initWithRootViewController:relationVC];
+    relationNaviVC.tabBarItem.title = @"关系";
+    relationNaviVC.tabBarItem.image = [UIImage renderingModeOriginalImageNamed:@"relation"];
+    relationNaviVC.tabBarItem.selectedImage = [UIImage renderingModeOriginalImageNamed:@"relationSel"];
+    
+    UIViewController *meVC = [[UIViewController alloc] init];
+    JRNavigationController *meNaviVC = [[JRNavigationController alloc] initWithRootViewController:meVC];
+    meNaviVC.tabBarItem.title = @"我";
+    meNaviVC.tabBarItem.image = [UIImage renderingModeOriginalImageNamed:@"me"];
+    meNaviVC.tabBarItem.selectedImage = [UIImage renderingModeOriginalImageNamed:@"meSel"];
+    
+    tabBarVC.viewControllers = @[homeNaviVC, relationNaviVC, meNaviVC];
+    
+    self.window.rootViewController = tabBarVC;
 }
 
 

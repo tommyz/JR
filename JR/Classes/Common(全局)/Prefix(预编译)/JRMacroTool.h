@@ -1,13 +1,13 @@
 //
-//  JRTool.h
+//  JRMacroTool.h
 //  JR
 //
 //  Created by Zj on 17/8/18.
 //  Copyright © 2017年 Zj. All rights reserved.
 //
 
-#ifndef JRTool_h
-#define JRTool_h
+#ifndef JRMacroTool_h
+#define JRMacroTool_h
 
 //自定义颜色RGB
 #define JRColor(R, G, B) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1]
@@ -58,4 +58,4 @@
 #define NSLog(format, ...)
 #endif
 
-#endif /* JRTool_h */
+#endif /* JRMacroTool_h */

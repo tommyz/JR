@@ -11,6 +11,7 @@
 
 #import "JRConst.h"
 #import "JRHttpAddress.h"
+#import "JRMacroTool.h"
 #import "JRTool.h"
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
@@ -19,5 +20,7 @@
 #import "UIBarButtonItem+ZJExtension.h"
 #import "NSDate+Category.h"
 #import "NSDateFormatter+Category.h"
+#import "JRNavigationController.h"
+#import "UIImage+ZJExtension.h"
 
 #endif /* JRHeaderFile_h */

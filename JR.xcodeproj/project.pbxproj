@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3876C5A21F492E0F00E74896 /* JRInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3876C5A11F492E0F00E74896 /* JRInfoView.m */; };
+		3876C5A51F4935F700E74896 /* JRTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3876C5A41F4935F700E74896 /* JRTool.m */; };
+		3876C5A71F493C0100E74896 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3876C5A61F493C0100E74896 /* Reveal.framework */; };
+		3876C5AA1F493C9800E74896 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3876C5A91F493C9800E74896 /* libz.tbd */; };
+		3876C5AD1F493F7500E74896 /* JRGymClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3876C5AC1F493F7500E74896 /* JRGymClassCell.m */; };
 		387C5AD91F47DD4200CF0E97 /* JRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C5AD81F47DD4200CF0E97 /* JRHomeViewController.m */; };
 		387C5ADF1F47DE1600CF0E97 /* JRZoomCycleImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C5ADC1F47DE1600CF0E97 /* JRZoomCycleImgCell.m */; };
 		387C5AE01F47DE1600CF0E97 /* JRZoomCycleImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C5ADE1F47DE1600CF0E97 /* JRZoomCycleImgView.m */; };
@@ -112,6 +117,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3876C5A01F492E0F00E74896 /* JRInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRInfoView.h; sourceTree = "<group>"; };
+		3876C5A11F492E0F00E74896 /* JRInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRInfoView.m; sourceTree = "<group>"; };
+		3876C5A31F4935F700E74896 /* JRTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRTool.h; sourceTree = "<group>"; };
+		3876C5A41F4935F700E74896 /* JRTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRTool.m; sourceTree = "<group>"; };
+		3876C5A61F493C0100E74896 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		3876C5A91F493C9800E74896 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		3876C5AB1F493F7500E74896 /* JRGymClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRGymClassCell.h; sourceTree = "<group>"; };
+		3876C5AC1F493F7500E74896 /* JRGymClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRGymClassCell.m; sourceTree = "<group>"; };
 		387C5AD71F47DD4200CF0E97 /* JRHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRHomeViewController.h; sourceTree = "<group>"; };
 		387C5AD81F47DD4200CF0E97 /* JRHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRHomeViewController.m; sourceTree = "<group>"; };
 		387C5ADB1F47DE1600CF0E97 /* JRZoomCycleImgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRZoomCycleImgCell.h; sourceTree = "<group>"; };
@@ -127,7 +140,7 @@
 		389281CE1F47167300CAADD0 /* JRConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRConst.h; sourceTree = "<group>"; };
 		389281CF1F4716BC00CAADD0 /* JRHttpAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRHttpAddress.h; sourceTree = "<group>"; };
 		389281D01F4716D600CAADD0 /* JRHeaderFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRHeaderFile.h; sourceTree = "<group>"; };
-		389281D11F4716FA00CAADD0 /* JRTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRTool.h; sourceTree = "<group>"; };
+		389281D11F4716FA00CAADD0 /* JRMacroTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRMacroTool.h; sourceTree = "<group>"; };
 		389281D31F47193800CAADD0 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		389281D41F47193800CAADD0 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		389281D51F47193800CAADD0 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -300,6 +313,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3876C5AA1F493C9800E74896 /* libz.tbd in Frameworks */,
+				3876C5A71F493C0100E74896 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +335,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3876C5A81F493C9700E74896 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3876C5A91F493C9800E74896 /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		387C5ADA1F47DE1600CF0E97 /* ZoomCycleImgView(轮播图) */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +360,8 @@
 			children = (
 				387C5AE21F47DFF000CF0E97 /* JRGymInfoView.h */,
 				387C5AE31F47DFF000CF0E97 /* JRGymInfoView.m */,
+				3876C5A01F492E0F00E74896 /* JRInfoView.h */,
+				3876C5A11F492E0F00E74896 /* JRInfoView.m */,
 			);
 			name = "GymInfoView(健身房信息)";
 			path = GymInfoView;
@@ -357,6 +382,8 @@
 			children = (
 				387C5AE71F47E15300CF0E97 /* JRGymClassTableView.h */,
 				387C5AE81F47E15300CF0E97 /* JRGymClassTableView.m */,
+				3876C5AB1F493F7500E74896 /* JRGymClassCell.h */,
+				3876C5AC1F493F7500E74896 /* JRGymClassCell.m */,
 			);
 			name = "GymClassTableView(健身课)";
 			path = GymClassTableView;
@@ -694,6 +721,7 @@
 				38AC38501F2C7B8700D47E35 /* JRTests */,
 				38AC385B1F2C7B8700D47E35 /* JRUITests */,
 				38AC38351F2C7B8700D47E35 /* Products */,
+				3876C5A81F493C9700E74896 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -710,6 +738,7 @@
 		38AC38361F2C7B8700D47E35 /* JR */ = {
 			isa = PBXGroup;
 			children = (
+				3876C5A61F493C0100E74896 /* Reveal.framework */,
 				38AC386A1F2C82B900D47E35 /* Classes */,
 			);
 			path = JR;
@@ -802,7 +831,7 @@
 				389281CE1F47167300CAADD0 /* JRConst.h */,
 				389281CF1F4716BC00CAADD0 /* JRHttpAddress.h */,
 				389281D01F4716D600CAADD0 /* JRHeaderFile.h */,
-				389281D11F4716FA00CAADD0 /* JRTool.h */,
+				389281D11F4716FA00CAADD0 /* JRMacroTool.h */,
 			);
 			path = "Prefix(预编译)";
 			sourceTree = "<group>";
@@ -850,6 +879,8 @@
 		38AC38791F2C82B900D47E35 /* Tool(工具类) */ = {
 			isa = PBXGroup;
 			children = (
+				3876C5A31F4935F700E74896 /* JRTool.h */,
+				3876C5A41F4935F700E74896 /* JRTool.m */,
 			);
 			path = "Tool(工具类)";
 			sourceTree = "<group>";
@@ -1144,6 +1175,7 @@
 				387C5ADF1F47DE1600CF0E97 /* JRZoomCycleImgCell.m in Sources */,
 				389282761F47193800CAADD0 /* ViewController+MASAdditions.m in Sources */,
 				389282791F47193800CAADD0 /* MJExtensionConst.m in Sources */,
+				3876C5AD1F493F7500E74896 /* JRGymClassCell.m in Sources */,
 				3892827F1F47193800CAADD0 /* NSObject+MJCoding.m in Sources */,
 				3892829B1F47193800CAADD0 /* SDWebImageDecoder.m in Sources */,
 				389282721F47193800CAADD0 /* MASViewConstraint.m in Sources */,
@@ -1154,11 +1186,13 @@
 				389282C01F4722DC00CAADD0 /* NSObject+ZJUIExtension.m in Sources */,
 				389282991F47193800CAADD0 /* SDImageCache.m in Sources */,
 				3892828D1F47193800CAADD0 /* MJRefreshBackStateFooter.m in Sources */,
+				3876C5A21F492E0F00E74896 /* JRInfoView.m in Sources */,
 				389282B61F4719E600CAADD0 /* UIImage+ZJExtension.m in Sources */,
 				389282A61F47193800CAADD0 /* UIView+WebCacheOperation.m in Sources */,
 				389282711F47193800CAADD0 /* MASViewAttribute.m in Sources */,
 				3892827E1F47193800CAADD0 /* NSObject+MJClass.m in Sources */,
 				3892827B1F47193800CAADD0 /* MJProperty.m in Sources */,
+				3876C5A51F4935F700E74896 /* JRTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1287,10 +1321,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ADESGAWMRV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JR",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JR/Classes/Common(全局)/Prefix(预编译)/JRHeaderFile.h";
 				INFOPLIST_FILE = "JR/Classes/Common(全局)/Entrance(入口)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Zj.JR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1301,10 +1340,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ADESGAWMRV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JR",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JR/Classes/Common(全局)/Prefix(预编译)/JRHeaderFile.h";
 				INFOPLIST_FILE = "JR/Classes/Common(全局)/Entrance(入口)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Zj.JR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

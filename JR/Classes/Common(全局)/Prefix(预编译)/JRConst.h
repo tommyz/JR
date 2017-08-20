@@ -21,7 +21,7 @@
 #define JRBlackColor [UIColor blackColor] //黑色
 #define JRClearColor [UIColor clearColor] //透明色
 #define JRCommonTextColor JRHexColor(0x3d4c4f) //一般文字颜色
-#define JRLightTextColor
+#define JRLightTextColor JRHexColor(0xa1a1a1) //浅色文字
 #define JRDisabledTextColor
 
 
@@ -53,6 +53,6 @@
 
 #define JRCommonTextFontSize 15
 #define JRLargeTextFontSize 20
-#define JRSmallTextFontSize 12
+#define JRSmallTextFontSize 11
 
 #endif /* JRConst_h */

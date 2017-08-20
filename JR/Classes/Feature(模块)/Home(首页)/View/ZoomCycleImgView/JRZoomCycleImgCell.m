@@ -30,9 +30,9 @@
 - (void)setupSubViews{
     _imgView = [[UIImageView alloc] initWithFrame:self.bounds];
     _imgView.contentMode = UIViewContentModeScaleToFill;
-    _imgView.layer.shadowColor = JRColor(41, 102, 92).CGColor;
-    _imgView.layer.shadowOpacity = 0.2;
-    _imgView.layer.shadowOffset = CGSizeMake(0, 4);
+    _imgView.layer.shadowColor = JRHexColor(0x73e0da).CGColor;
+    _imgView.layer.shadowOpacity = 0.1;
+    _imgView.layer.shadowOffset = CGSizeMake(0, 3);
     
     [self.contentView addSubview:_imgView];
 }

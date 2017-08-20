@@ -106,7 +106,7 @@
 
 //item大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(JRScreenWidth - 6 * JRPadding, 175);
+    return CGSizeMake(JRScreenWidth - 6 * JRPadding, JRZoomCycleImgViewHeight);
 }
 
 

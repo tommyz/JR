@@ -47,7 +47,6 @@
 
 #pragma mark - private
 - (void)setupNavibationBar{
-    
 
 }
 
