@@ -53,7 +53,7 @@
 #pragma mark - private
 - (void)setupScrollView{
     _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    _scrollView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
+    _scrollView.contentInset = UIEdgeInsetsMake(-20, 0, 20, 0);
     _scrollView.showsVerticalScrollIndicator = NO;
     _scrollView.contentSize = CGSizeMake(JRScreenWidth, JRGymInfoViewHeight + JRZoomCycleImgViewHeight + JRHomeTitleHeight * 2 + JRFitnessStatusViewHeight + JRGymClassCellHeight * 3 + 14 * JRPadding);
     

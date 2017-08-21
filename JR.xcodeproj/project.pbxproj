@@ -97,6 +97,7 @@
 		38AC385D1F2C7B8700D47E35 /* JRUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC385C1F2C7B8700D47E35 /* JRUITests.m */; };
 		38AC38851F2C82B900D47E35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC386F1F2C82B900D47E35 /* AppDelegate.m */; };
 		38AC38871F2C82B900D47E35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC38711F2C82B900D47E35 /* main.m */; };
+		F2E2F3DF1F4A6A310050353B /* JRMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2F3DE1F4A6A310050353B /* JRMeTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -306,6 +307,8 @@
 		38AC386F1F2C82B900D47E35 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		38AC38701F2C82B900D47E35 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38AC38711F2C82B900D47E35 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2E2F3DD1F4A6A310050353B /* JRMeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRMeTableViewController.h; sourceTree = "<group>"; };
+		F2E2F3DE1F4A6A310050353B /* JRMeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRMeTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,68 +425,6 @@
 				387C5AE61F47E0D800CF0E97 /* GymClassTableView(健身课) */,
 				387C5AE11F47DFE100CF0E97 /* GymInfoView(健身房信息) */,
 				387C5ADA1F47DE1600CF0E97 /* ZoomCycleImgView(轮播图) */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		389281C61F47162000CAADD0 /* Me(我) */ = {
-			isa = PBXGroup;
-			children = (
-				389281C71F47162000CAADD0 /* Controller */,
-				389281C81F47162000CAADD0 /* Model */,
-				389281C91F47162000CAADD0 /* View */,
-			);
-			path = "Me(我)";
-			sourceTree = "<group>";
-		};
-		389281C71F47162000CAADD0 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		389281C81F47162000CAADD0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		389281C91F47162000CAADD0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		389281CA1F47162000CAADD0 /* Relation(关系) */ = {
-			isa = PBXGroup;
-			children = (
-				389281CB1F47162000CAADD0 /* Controller */,
-				389281CC1F47162000CAADD0 /* Model */,
-				389281CD1F47162000CAADD0 /* View */,
-			);
-			path = "Relation(关系)";
-			sourceTree = "<group>";
-		};
-		389281CB1F47162000CAADD0 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		389281CC1F47162000CAADD0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		389281CD1F47162000CAADD0 /* View */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -888,10 +829,9 @@
 		38AC387A1F2C82B900D47E35 /* Feature(模块) */ = {
 			isa = PBXGroup;
 			children = (
+				F2E2F3D61F4A69130050353B /* Me(我) */,
 				38AC387B1F2C82B900D47E35 /* Basic(基础类) */,
 				389281C21F47162000CAADD0 /* Home(首页) */,
-				389281C61F47162000CAADD0 /* Me(我) */,
-				389281CA1F47162000CAADD0 /* Relation(关系) */,
 			);
 			path = "Feature(模块)";
 			sourceTree = "<group>";
@@ -974,6 +914,39 @@
 			path = "Image(图片)";
 			sourceTree = "<group>";
 		};
+		F2E2F3D61F4A69130050353B /* Me(我) */ = {
+			isa = PBXGroup;
+			children = (
+				F2E2F3D71F4A69130050353B /* Controller */,
+				F2E2F3D81F4A69130050353B /* Model */,
+				F2E2F3D91F4A69130050353B /* View */,
+			);
+			path = "Me(我)";
+			sourceTree = "<group>";
+		};
+		F2E2F3D71F4A69130050353B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2E2F3DD1F4A6A310050353B /* JRMeTableViewController.h */,
+				F2E2F3DE1F4A6A310050353B /* JRMeTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F2E2F3D81F4A69130050353B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2E2F3D91F4A69130050353B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1036,12 +1009,12 @@
 		38AC382C1F2C7B8700D47E35 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Zj;
 				TargetAttributes = {
 					38AC38331F2C7B8700D47E35 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = ADESGAWMRV;
+						DevelopmentTeam = 2DEDNW2H7U;
 						ProvisioningStyle = Automatic;
 					};
 					38AC384C1F2C7B8700D47E35 = {
@@ -1182,6 +1155,7 @@
 				389282951F47193800CAADD0 /* UIScrollView+MJRefresh.m in Sources */,
 				389282A21F47193800CAADD0 /* UIImage+MultiFormat.m in Sources */,
 				389282811F47193800CAADD0 /* NSObject+MJProperty.m in Sources */,
+				F2E2F3DF1F4A6A310050353B /* JRMeTableViewController.m in Sources */,
 				38AC38851F2C82B900D47E35 /* AppDelegate.m in Sources */,
 				389282C01F4722DC00CAADD0 /* NSObject+ZJUIExtension.m in Sources */,
 				389282991F47193800CAADD0 /* SDImageCache.m in Sources */,
@@ -1246,6 +1220,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1293,6 +1268,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1320,7 +1296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ADESGAWMRV;
+				DEVELOPMENT_TEAM = 2DEDNW2H7U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JR",
@@ -1339,7 +1315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ADESGAWMRV;
+				DEVELOPMENT_TEAM = 2DEDNW2H7U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JR",

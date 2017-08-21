@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "JRHomeViewController.h"
+#import "JRMeTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -46,7 +47,7 @@
     relationNaviVC.tabBarItem.image = [UIImage renderingModeOriginalImageNamed:@"relation"];
     relationNaviVC.tabBarItem.selectedImage = [UIImage renderingModeOriginalImageNamed:@"relationSel"];
     
-    UIViewController *meVC = [[UIViewController alloc] init];
+    JRMeTableViewController *meVC = [[JRMeTableViewController alloc] init];
     JRNavigationController *meNaviVC = [[JRNavigationController alloc] initWithRootViewController:meVC];
     meNaviVC.tabBarItem.title = @"我";
     meNaviVC.tabBarItem.image = [UIImage renderingModeOriginalImageNamed:@"me"];

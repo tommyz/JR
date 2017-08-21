@@ -36,25 +36,29 @@
 
 #pragma mark - private
 - (void)setupSubViews{
+    [JRTool shadow:self.layer];
+    
     _stautsImgView = [UIImageView imageViewWithFrame:CGRectMake(JRPadding, 0, self.width - 2 * JRPadding, self.height) image:[UIImage imageNamed:@"status"]];
+    _stautsImgView.layer.masksToBounds = YES;
+    _stautsImgView.layer.cornerRadius = 3;
     
     [self addSubview:_stautsImgView];
     
     _waveLayer1 = [CAShapeLayer layer];
     _waveLayer1.backgroundColor = JRClearColor.CGColor;
-    _waveLayer1.frame = CGRectMake(JRPadding, self.height / 5 * 4, self.width - 2 * JRPadding, self.height / 5);
+    _waveLayer1.frame = CGRectMake(0, self.height / 5 * 4, self.width - 2 * JRPadding, self.height / 5);
     _waveLayer1.fillColor = [JRHexColor(0x68cfee) colorWithAlphaComponent:0.5].CGColor;
     _waveLayer1.masksToBounds = YES;
     
-    [self.layer addSublayer:_waveLayer1];
+    [_stautsImgView.layer addSublayer:_waveLayer1];
     
     _waveLayer2 = [CAShapeLayer layer];
     _waveLayer2.backgroundColor = JRClearColor.CGColor;
-    _waveLayer2.frame = CGRectMake(JRPadding, self.height / 3 * 2, self.width - 2 * JRPadding, self.height / 3);
+    _waveLayer2.frame = CGRectMake(0, self.height / 3 * 2, self.width - 2 * JRPadding, self.height / 3);
     _waveLayer2.fillColor = [JRHexColor(0x68cfee) colorWithAlphaComponent:0.3].CGColor;
     _waveLayer2.masksToBounds = YES;
     
-    [self.layer addSublayer:_waveLayer2];
+    [_stautsImgView.layer addSublayer:_waveLayer2];
     
     
     //动画参数初始化
