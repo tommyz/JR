@@ -36,6 +36,7 @@
     tabBarVC.tabBar.tintColor = JRCommonTextColor;
     
     JRHomeViewController *homeVC = [[JRHomeViewController alloc] init];
+    homeVC.showLaunchAnimation = YES;
     JRNavigationController *homeNaviVC = [[JRNavigationController alloc] initWithRootViewController:homeVC];
     homeNaviVC.tabBarItem.title = @"首页";
     homeNaviVC.tabBarItem.image = [UIImage renderingModeOriginalImageNamed:@"home"];

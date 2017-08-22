@@ -11,6 +11,7 @@
 #import "JRZoomCycleImgView.h"
 #import "JRFitnessStatusView.h"
 #import "JRGymClassTableView.h"
+#import "Lottie.h"
 
 @interface JRHomeViewController ()
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -20,6 +21,8 @@
 @property (nonatomic, strong) JRGymClassTableView *gymClassTableView;
 @property (nonatomic, strong) UILabel *statusTitle;
 @property (nonatomic, strong) UILabel *classTitle;
+@property (nonatomic, strong) UIView *launchMask;
+@property (nonatomic, strong) LOTAnimationView *launchAnimation;
 
 @end
 
@@ -40,6 +43,10 @@
     [self setupFitnessStatusView];
     
     [self setupGymClassTableView];
+    
+    if (self.isShowLaunchAnimation) {
+        [self setupLaunchMask];
+    }
 }
 
 
@@ -50,7 +57,42 @@
 }
 
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    if (_launchMask && _launchAnimation) {
+        WeakObj(self);
+        [_launchAnimation playWithCompletion:^(BOOL animationFinished) {
+            
+            [UIView animateWithDuration:0.3 animations:^{
+                selfWeak.launchMask.alpha = 0;
+            } completion:^(BOOL finished) {
+                [selfWeak.launchAnimation removeFromSuperview];
+                selfWeak.launchAnimation = nil;
+                [selfWeak.launchMask removeFromSuperview];
+                selfWeak.launchMask = nil;
+            }];
+        }];
+    }
+}
+
+
 #pragma mark - private
+- (void)setupLaunchMask{
+    _launchMask = [[UIView alloc] initWithFrame:self.view.bounds];
+    
+    [JRKeyWindow addSubview:_launchMask];
+    
+    _launchAnimation = [LOTAnimationView animationNamed:@"data"];
+    _launchAnimation.cacheEnable = NO;
+    _launchAnimation.frame = self.view.bounds;
+    _launchAnimation.contentMode = UIViewContentModeScaleToFill;
+    _launchAnimation.animationSpeed = 1.0;
+    
+    [_launchMask addSubview:_launchAnimation];
+}
+
+
 - (void)setupScrollView{
     _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     _scrollView.contentInset = UIEdgeInsetsMake(-20, 0, 20, 0);
