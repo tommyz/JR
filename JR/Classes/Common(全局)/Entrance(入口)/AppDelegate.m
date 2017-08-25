@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "JRHomeViewController.h"
-#import "JRMeTableViewController.h"
+#import "JRGuideViewController.h"
 
 @interface AppDelegate ()
 
@@ -32,31 +31,8 @@
     self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
     
-    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
-    tabBarVC.tabBar.tintColor = JRCommonTextColor;
-    
-    JRHomeViewController *homeVC = [[JRHomeViewController alloc] init];
-    homeVC.showLaunchAnimation = YES;
-    JRNavigationController *homeNaviVC = [[JRNavigationController alloc] initWithRootViewController:homeVC];
-    homeNaviVC.tabBarItem.title = @"首页";
-    homeNaviVC.tabBarItem.image = [UIImage renderingModeOriginalImageNamed:@"home"];
-    homeNaviVC.tabBarItem.selectedImage = [UIImage renderingModeOriginalImageNamed:@"homeSel"];
-    
-    UIViewController *relationVC = [[UIViewController alloc] init];
-    JRNavigationController *relationNaviVC = [[JRNavigationController alloc] initWithRootViewController:relationVC];
-    relationNaviVC.tabBarItem.title = @"关系";
-    relationNaviVC.tabBarItem.image = [UIImage renderingModeOriginalImageNamed:@"relation"];
-    relationNaviVC.tabBarItem.selectedImage = [UIImage renderingModeOriginalImageNamed:@"relationSel"];
-    
-    JRMeTableViewController *meVC = [[JRMeTableViewController alloc] init];
-    JRNavigationController *meNaviVC = [[JRNavigationController alloc] initWithRootViewController:meVC];
-    meNaviVC.tabBarItem.title = @"我";
-    meNaviVC.tabBarItem.image = [UIImage renderingModeOriginalImageNamed:@"me"];
-    meNaviVC.tabBarItem.selectedImage = [UIImage renderingModeOriginalImageNamed:@"meSel"];
-    
-    tabBarVC.viewControllers = @[homeNaviVC, relationNaviVC, meNaviVC];
-    
-    self.window.rootViewController = tabBarVC;
+    JRGuideViewController *guideVC = [[JRGuideViewController alloc] init];
+    self.window.rootViewController = guideVC;
 }
 
 

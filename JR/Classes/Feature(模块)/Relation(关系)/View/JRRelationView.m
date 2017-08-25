@@ -1,23 +1,23 @@
 //
-//  LTZoomCycleImgView.m
-//  旅途逸居
+//  JRRelationView.m
+//  JR
 //
-//  Created by 张骏 on 17/5/5.
-//  Copyright © 2017年 武汉国扬科技有限公司. All rights reserved.
+//  Created by 张骏 on 17/8/25.
+//  Copyright © 2017年 Zj. All rights reserved.
 //
 
-#define JRZoomCycleImgCellReusedId @"zoomCycleImgCellReusedId"
-
-#import "JRZoomCycleImgView.h"
+#import "JRRelationView.h"
 #import "JRZoomCycleImgCell.h"
 
-@interface JRZoomCycleImgView() <UICollectionViewDelegate, UICollectionViewDataSource>
+static NSString *const JRZoomCycleImgCellReusedId = @"zoomCycleImgCellReusedId";
+
+@interface JRRelationView() <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, assign) NSInteger currentIndex;
 
 @end
 
-@implementation JRZoomCycleImgView
+@implementation JRRelationView
 
 #pragma mark ---lifeCycle---
 - (instancetype)initWithFrame:(CGRect)frame{
@@ -37,8 +37,8 @@
     
     if (picArray.count) {
         [_collectionView reloadData];
-        [_collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:500 * picArray.count inSection:0] animated:NO scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
-        _currentIndex = 500 * picArray.count - 1;
+        [_collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:picArray.count - 2 inSection:0] animated:NO scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
+        _currentIndex = picArray.count - 2;
     }
 }
 
@@ -91,22 +91,22 @@
 
 #pragma mark ---UICollectionViewDelegate---
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 1000 * _picArray.count;
+    return _picArray.count;
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     JRZoomCycleImgCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:JRZoomCycleImgCellReusedId forIndexPath:indexPath];
-    cell.imgView.image = _picArray[indexPath.item % _picArray.count];
-    cell.transform = indexPath.item == _picArray.count * 500 ? CGAffineTransformMakeScale(1, 1) : CGAffineTransformMakeScale(0.85, 0.85);
+    cell.imgView.image = _picArray[indexPath.item];
+    cell.transform = indexPath.item == (_picArray.count - 2) ? CGAffineTransformMakeScale(1, 1) : CGAffineTransformMakeScale(0.85, 0.85);
     
     return cell;
 }
 
 //item大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(JRScreenWidth - 6 * JRPadding, JRZoomCycleImgViewHeight);
+    return CGSizeMake(JRScreenWidth - 6 * JRPadding, self.height);
 }
 
 
@@ -116,16 +116,14 @@
 }
 
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.item % _picArray.count == 0) {
-        _clicked();
-    }
-}
-
-
 #pragma mark ---UIScrollViewDelegate---
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat offsetX = _collectionView.contentOffset.x;
+    if (offsetX > 530) {
+        _collectionView.contentOffset = CGPointMake(530, 0);
+    } else if (offsetX < 240) {
+        _collectionView.contentOffset = CGPointMake(240, 0);
+    }
     
     [self adjustImgTransformWithOffsetY:offsetX];
 }

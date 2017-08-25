@@ -15,4 +15,9 @@
  */
 @property (nonatomic, strong) NSArray *picArray;
 
+/**
+ 回调
+ */
+@property (nonatomic, copy) returnBlock clicked;
+
 @end

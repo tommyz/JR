@@ -8,6 +8,8 @@
 
 #import "JRMeTableViewController.h"
 
+static NSString *const CellReusedId = @"CellReusedId";
+
 @interface JRMeTableViewController ()
 
 @end
@@ -34,7 +36,7 @@
 
     [self.tableView setTableHeaderView:[UIImageView imageViewWithFrame:CGRectMake(0, 0, JRScreenWidth, JRHeight(326.5)) image:[UIImage imageNamed:@"meHeader"]]];
     [self.tableView setRowHeight:50];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"reusedId"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellReusedId];
     self.tableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     self.tableView.separatorColor = JRHexColor(0xf4f4f4);
@@ -53,7 +55,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reusedId" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellReusedId forIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     NSString *text;
     UIImage *image;

@@ -7,6 +7,7 @@
 //
 
 #import "JRHomeViewController.h"
+#import "JRAdViewController.h"
 #import "JRGymInfoView.h"
 #import "JRZoomCycleImgView.h"
 #import "JRFitnessStatusView.h"
@@ -87,7 +88,7 @@
     _launchAnimation.cacheEnable = NO;
     _launchAnimation.frame = self.view.bounds;
     _launchAnimation.contentMode = UIViewContentModeScaleToFill;
-    _launchAnimation.animationSpeed = 1.0;
+    _launchAnimation.animationSpeed = 1.2;
     
     [_launchMask addSubview:_launchAnimation];
 }
@@ -112,7 +113,13 @@
 
 - (void)setupZoomCycleImgView{
     _zoomCycleImgView = [[JRZoomCycleImgView alloc] initWithFrame:CGRectMake(0, _gymInfoView.bottom + 3 * JRPadding, JRScreenWidth, JRZoomCycleImgViewHeight)];
-    _zoomCycleImgView.picArray = @[[UIImage imageNamed:@"banner1"], [UIImage imageNamed:@"banner2"], [UIImage imageNamed:@"banner3"]];
+    _zoomCycleImgView.picArray = @[[UIImage imageNamed:@"banner1"], [UIImage imageNamed:@"banner2"]];
+    WeakObj(self);
+    _zoomCycleImgView.clicked = ^{
+        JRAdViewController *adVC = [[JRAdViewController alloc] init];
+        
+        [selfWeak.navigationController pushViewController:adVC animated:YES];
+    };
     
     [_scrollView addSubview:_zoomCycleImgView];
     
