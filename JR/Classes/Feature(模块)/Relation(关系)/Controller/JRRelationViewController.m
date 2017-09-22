@@ -17,6 +17,7 @@
 
 @implementation JRRelationViewController
 
+#pragma mark - lifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -33,6 +34,7 @@
 }
 
 
+#pragma mark - private
 - (void)setBgImgView{
     _bgImgView = [UIImageView imageViewWithFrame:self.view.bounds image:[UIImage imageNamed:@"relationBg"]];
     

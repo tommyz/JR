@@ -14,7 +14,6 @@
 #import "JRMacroTool.h"
 #import "JRTool.h"
 #import "Masonry.h"
-#import "UIImageView+WebCache.h"
 #import "UIView+ZJExtension.h"
 #import "NSObject+ZJUIExtension.h"
 #import "UIBarButtonItem+ZJExtension.h"
